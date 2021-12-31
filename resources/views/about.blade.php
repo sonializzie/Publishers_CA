@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">Welcome!</div>
+                <div class="card-header">About Publishers</div>
 
                 <div class="card-body">
                     @if (session('status'))
@@ -14,9 +14,7 @@
                         </div>
                     @endif
 
-                    Welcome to Publishers.
-
-                    Read more <a href="{{route('about')}}">About Us</a>
+                    This is the About Page
                 </div>
             </div>
         </div>
