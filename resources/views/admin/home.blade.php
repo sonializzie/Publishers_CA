@@ -15,6 +15,7 @@
                     @endif
 
                     You are logged in as an Admin!
+                    <a href="{{ route('admin.publishers.index')}}"> View All Publishers</a>
                 </div>
             </div>
         </div>

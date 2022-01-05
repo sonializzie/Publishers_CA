@@ -15,6 +15,7 @@
                     @endif
 
                     You are logged in as an Ordinary user!
+                    <a href="{{ route('user.publishers.index')}}"> View All Publishers</a>
                 </div>
             </div>
         </div>

@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\User\PublisherController as UserPublisherController;
+use App\Http\Controllers\Admin\PublisherController as AdminPublisherController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 
@@ -34,3 +35,13 @@ Route::get('user/home', [App\Http\Controllers\User\HomeController::class, 'index
 
 Route::get('user/publishers/', [UserPublisherController::class, 'index'])->name('user.publishers.index');
 Route::get('user/publishers/{id}', [UserPublisherController::class, 'show'])->name('user.publishers.show');
+
+//Seven Routes for the Publisher AdminPublisherController
+
+Route::get('/admin/publishers/', [AdminPublisherController::class, 'index'])->name('admin.publishers.index');
+Route::get('/admin/publishers/create', [AdminPublisherController::class, 'create'])->name('admin.publishers.create');
+Route::get('/admin/publishers/{id}', [AdminPublisherController::class, 'show'])->name('admin.publishers.show');
+Route::post('/admin/publishers/store', [AdminPublisherController::class, 'store'])->name('admin.publishers.store');
+Route::get('/admin/publishers/{id}/edit', [AdminPublisherController::class, 'edit'])->name('admin.publishers.edit');
+Route::put('/admin/publishers/{id}', [AdminPublisherController::class, 'update'])->name('admin.publishers.update');
+Route::delete('/admin/publishers/{id}', [AdminPublisherController::class, 'destroy'])->name('admin.publishers.destroy');
