@@ -14,7 +14,7 @@
                         </div>
                     @endif
 
-                    This is the About Page
+                    This is the About Page <a href="{{route('welcome')}}">Homepage</a>
                 </div>
             </div>
         </div>
