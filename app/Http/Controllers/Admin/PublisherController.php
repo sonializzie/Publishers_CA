@@ -49,7 +49,7 @@ class PublisherController extends Controller
             'manager_name' => 'required',
             'email' => 'required',
             'country' => 'required',
-            // 'publisher_image' => 'file|image'
+            'publisher_image' => 'file|image'
         ]);
 
         $publisher_image = $request->file('publisher_image');
@@ -138,6 +138,7 @@ class PublisherController extends Controller
 
     /**
      * Remove the specified resource from storage.
+     * Also remove the unwanted publishers from the database.
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response

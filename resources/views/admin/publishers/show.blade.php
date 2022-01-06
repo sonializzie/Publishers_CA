@@ -5,6 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
+                <!--Publisher Title with the pub id-->
                 <div class="card-header">
                     Publishers : {{ $publisher->id }}
                 </div>
@@ -12,6 +13,8 @@
                 <div class="card-body">
                     <table id="table-publishers" class="table table-hover">
                         <tbody>
+                             <!--Publisher with publisher images-->
+                              <!--Publisher displaying the publisher in the admin.show.php -->
                             <tr>
                                 <td rowspan="8"><img src="{{ asset('storage/images/' . $publisher->image_location) }}" width="150"/></td>
                             </tr>
@@ -47,6 +50,8 @@
                     </table>
                     <a href="{{ route('admin.publishers.index', $publisher->id)}}"
                                             class="btn btn-secondary">Back</a>
+
+                                  <!--Publisher going back to the admin.index.app-->
                 </div>
             </div>
         </div>
