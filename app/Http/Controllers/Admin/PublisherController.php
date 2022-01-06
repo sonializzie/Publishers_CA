@@ -48,8 +48,14 @@ class PublisherController extends Controller
             'pub_name' => 'required',
             'manager_name' => 'required',
             'email' => 'required',
-            'country' => 'required'
+            'country' => 'required',
+            // 'publisher_image' => 'file|image'
         ]);
+
+        $publisher_image = $request->file('publisher_image');
+        $filename = $publisher_image->hashName();
+
+        $path = $publisher_image->storeAs('public/images', $filename);
 
         // if validation passes create the new book
         $publisher = new Publisher();
@@ -60,6 +66,7 @@ class PublisherController extends Controller
         $publisher->city = $request->input('city');
         $publisher->state = $request->input('state');
         $publisher->country = $request->input('country');
+        $publisher->image_location =  $filename;
         $publisher->save();
 
         return redirect()->route('admin.publishers.index');

@@ -13,6 +13,9 @@
                     <table id="table-publishers" class="table table-hover">
                         <tbody>
                             <tr>
+                                <td rowspan="8"><img src="{{ asset('storage/images/' . $publisher->image_location) }}" width="150"/></td>
+                            </tr>
+                            <tr>
                                 <td>Pub Name</td>
                                 <td>{{ $publisher->pub_name }}</td>
                             </tr>

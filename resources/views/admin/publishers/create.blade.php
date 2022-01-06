@@ -51,6 +51,11 @@
                 <input type="text" class="form-control" id="country" name="country" value="{{ old('country') }}" />
               </div>
 
+               <div class="form-group">
+                <label for="publisher_image"> Publisher Image </label>
+                <input type="file" class="form-control" id='publisher_image' name="publisher_image" />
+            </div>
+
 
               <a href="{{ route('admin.publishers.index') }}" class="btn btn-outline">Cancel</a>
               <button type="submit" class="btn btn-primary float-right">Submit</button>
