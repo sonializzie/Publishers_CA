@@ -22,6 +22,7 @@
                     <th>City</th>
                     <th>State</th>
                     <th>Country</th>
+                    <th>Settings</th>
                   <th></th>
                 </thead>
                 <tbody>
