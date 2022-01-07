@@ -25,6 +25,7 @@
                             </thead>
 
                             <tbody>
+                                <!-- Loop through the following for every item in the $publishers[] array, display pub_name, mananger_name, phone etc. to the screen -->
                                 @foreach ($publishers as $publisher)
                                 <tr data-id="{{$publisher->id}}">
                                     <td>{{ $publisher->pub_name }}</td>
@@ -36,6 +37,7 @@
                                     <td>{{ $publisher->country }}</td>
 
                                     <td>
+                                         <!-- View button table for publishers  -->
                                         <a href="{{ route('user.publishers.show', $publisher->id)}}"
                                             class="btn btn-primary">View</a>
                                     </td>

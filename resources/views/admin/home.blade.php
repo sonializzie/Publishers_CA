@@ -12,6 +12,9 @@
                         <div class="alert alert-success" role="alert">
                             {{ session('status') }}
                         </div>
+
+                    <!-- Admin message in the admin.publishers.home with a link
+                            of the view all publishers table-->
                     @endif
 
                     You are logged in as an Admin!

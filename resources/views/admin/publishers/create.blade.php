@@ -19,6 +19,7 @@
                   @endforeach
                 </ul>
               </div>
+              <!-- This is form for when the admin creates a new publisher table -->
             @endif
             <form method="POST" action="{{ route('admin.publishers.store')  }}">
               <input type="hidden" name="_token" value="{{  csrf_token()  }}">
@@ -51,6 +52,9 @@
                 <input type="text" class="form-control" id="country" name="country" value="{{ old('country') }}" />
               </div>
 
+              <!-- If the Admin wants to cancel the form then it will return to the admin.publishers.index
+                If the Admin wants to submit the form then it will create and validate and send
+                to the admin.publishers.index -->
 
               <a href="{{ route('admin.publishers.index') }}" class="btn btn-outline">Cancel</a>
               <button type="submit" class="btn btn-primary float-right">Submit</button>

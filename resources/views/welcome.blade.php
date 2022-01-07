@@ -12,6 +12,10 @@
                         <div class="alert alert-success" role="alert">
                             {{ session('status') }}
                         </div>
+
+                        <!-- Welcome message in the user with a link
+                            of the view all publishers table-->
+
                     @endif
 
                     Welcome to Publishers.

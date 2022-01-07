@@ -7,6 +7,7 @@
         <div class="card">
           <div class="card-header">
             Publishers
+            <!-- The add button will call admin.publishers.create, the create will be implemented when submitted -->
             <a href="{{ route('admin.publishers.create') }}" class="btn btn-primary float-right">Add</a>
           </div>
           <div class="card-body">
@@ -25,7 +26,7 @@
                   <th></th>
                 </thead>
                 <tbody>
-
+                    <!-- Loop through the following for every item in the $publishers[] array, display pub_name, mananger_name, phone etc. to the screen -->
                       @foreach ($publishers as $publisher)
                                 <tr data-id="{{$publisher->id}}">
                                     <td>{{ $publisher->pub_name }}</td>
@@ -37,8 +38,11 @@
                                     <td>{{ $publisher->country }}</td>
 
                       <td>
+                          <!-- View button table for publishers  -->
                         <a href="{{ route('admin.publishers.show', $publisher->id) }}" class="btn btn-success">View</a>
+                        <!-- Edit button table for publishers  -->
                         <a href="{{ route('admin.publishers.edit', $publisher->id) }}" class="btn btn-warning">Edit</a>
+                        <!-- Delete button table for publishers  -->
                         <form style="display:inline-block" method="POST" action="{{ route('admin.publishers.destroy', $publisher->id) }}">
                           <input type="hidden" name="_method" value="DELETE">
                           <input type="hidden" name="_token"  value="{{ csrf_token() }}">

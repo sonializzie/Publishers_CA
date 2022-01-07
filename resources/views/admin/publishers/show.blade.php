@@ -6,9 +6,10 @@
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header">
-                    Publishers : {{ $publisher->id }}
+                    Publishers : {{ $publisher->id }} <!--This is how I pass the ID-->
                 </div>
 
+                <!--This form is for viewing only for the publishers.-->
                 <div class="card-body">
                     <table id="table-publishers" class="table table-hover">
                         <tbody>
@@ -42,6 +43,7 @@
                             </tr>
                         </tbody>
                     </table>
+                    <!-- The Back button will return to the admin.publishers.index-->
                     <a href="{{ route('admin.publishers.index', $publisher->id)}}"
                                             class="btn btn-secondary">Back</a>
                 </div>
