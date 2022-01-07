@@ -51,7 +51,7 @@ class PublisherController extends Controller
             'country' => 'required'
         ]);
 
-        // if validation passes create the new book
+        // if validation passes create the new book from the database
         $publisher = new Publisher();
         $publisher->pub_name = $request->input('pub_name');
         $publisher->manager_name = $request->input('manager_name');
